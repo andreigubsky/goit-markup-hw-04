@@ -281,7 +281,10 @@ Section our-team
     text-align: center;
     
 }
-
+.icon-social {
+    width: 40px;
+    height: 40px;
+}
 /*
 Main ->
 Section our-portfolio
