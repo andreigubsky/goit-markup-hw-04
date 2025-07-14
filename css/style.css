@@ -1,0 +1,363 @@
+/*
+ДЗ 2
+Пропиши стилі для body (font-family, color та background-color)
+CSS-правила для скидання дефолтного підкреслення для посилань та маркерів у списках.
+*/
+/*
+ДЗ 3
+Обнули дефолтні маржини від браузера для:
+— заголовків та параграфів тексту
+
+— для списків потрібно обнулити дефолтні маржини та лівий падінг
+
+Зроби зображення блочними елементами
+Визнач ширину та падінги для контейнера та пропиши їх у CSS-файлі: .container
+
+
+
+Для розташування елементів використовується Flexbox, 
+але тільки там, де це необхідно. 
+Наприклад у шапці, навігації, списках в секціях тощо, тобто там, 
+де розташувати елементи горизонтально по-іншому неможливо.
+*/
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    color: #434455;
+    background-color: #fff;
+
+}
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    
+}
+p {
+    margin: 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+/**/
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+/**/
+
+.container { 
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+/* Header */
+/* У хедера є нижня рамка, необхідно сильно наблизити макет, щоб побачити її. */
+.page-header {
+    border-bottom: 1px solid #E7E9FC;
+}
+.page-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation{
+    display: flex;
+    align-items: center;
+}
+.logo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #4d5ae5;
+}
+.navigation .logo {
+    margin-right: 76px;
+    padding: 24px 0;
+}
+.logo span {
+    color:#2e2f42;
+}
+.top-menu {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    display: flex;
+    gap: 40px;
+    
+}
+.top-menu .top-menu-item{
+    color:#2E2F42;
+    display: block;
+    padding: 24px 0;
+}
+.top-menu a:hover, .top-menu a:focus {
+    color: #404BBF;
+} 
+address .menu-contacts {
+    font-style: normal;
+    display: flex;
+   /* margin-left: 332px;*/
+    gap: 40px;
+}
+.menu-contacts .contacts-item {
+    letter-spacing: 0.02em;
+    
+    
+}
+.menu-contacts li{
+    margin-right: 40px;
+}
+.menu-contacts:last-child li{
+    margin-right: 0;
+}
+.menu-contacts a:hover, .menu-contacts a:focus {
+    color: #404BBF;
+} 
+
+/*
+All sections
+*/
+.section {
+
+
+    padding-top: 120px;
+    padding-bottom: 120px;
+    
+    /*border: 1px solid brown;*/
+}
+/* 
+Main ->
+Section main-page 
+*/
+
+.section.main-page {
+     background-color: #2E2F42;
+     padding: 188px 0;
+     text-align: center;
+}
+
+.section .main-page-header {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    color: #fff;
+    /*border: 1px dashed white;*/
+    max-width: 496px;
+    margin: 0 auto;
+}
+.section.main-page .main-button {
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: #fff;
+    background-color: #4D5AE5;
+    margin-top: 68px;
+    padding: 16px 32px;
+    border:none;
+    border-radius: 4px;
+    display: block;
+    margin: 48px auto 0;
+    min-width: 169px;
+    cursor: pointer;
+}
+.section.main-page .main-button:hover, .section:first-child .main-button:focus {
+    background-color: #404BBF;
+    cursor: pointer;
+}
+
+/* 
+Main ->
+Section our-benefits
+*/
+.section.benefits{
+    padding: 120px 0 120px 0;
+}
+
+.section.benefits .section-header {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize;
+    color:#2E2F42;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+.benefits-list{
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    
+}
+.benefits-list .benefit-item {
+    flex-basis: calc((100% - 24px) / 4);
+}
+.benefits-list .benefits-header {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color:#2E2F42;
+    margin-bottom: 8px;
+}
+.benefits-list .benefits-paragraph{
+    color:#434455;
+    letter-spacing: 0.02em;
+    font-size: 16px;
+    text-align: left;   
+}
+
+/* 
+Main ->
+Section our-team 
+*/
+
+.section.team {
+    background-color: #F4F4FD;
+    padding: 120px 0 120px 0;
+}
+.section.team .section-header {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize;
+    color:#2E2F42;
+    margin-bottom: 72px;
+}
+.team-list {
+    display: flex;
+    gap: 24px;
+}
+.team-member{
+    background-color: #fff;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    flex-basis: calc((100% - 72px) / 4);
+}
+.team-member .thumb{
+    padding: 32px 0;
+}
+.team-header{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.02em;
+    color:#2E2F42;
+    margin-bottom: 8px;
+}
+.team-paragraph{
+    color:#434455;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    
+}
+
+/*
+Main ->
+Section our-portfolio
+*/
+
+.section.portfolio{
+    color:#434455;
+    font-size: 36px;
+    line-height: 1.11;
+    padding: 120px 0 120px 0;
+}
+.section.portfolio .section-header {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize;
+    color:#2E2F42;
+    margin-bottom: 72px;
+}
+.portfolio-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+.porfolio-item{
+    width: calc((100% - 48px)/3);
+}
+.porfolio-item .thumb{
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+}
+.portfolio-list .porfolio-item-header{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: capitalize;
+    letter-spacing: 0.02em;
+    color:#2E2F42;
+    margin-bottom: 8px;
+}
+.portfolio-list .porfolio-item-paragraph {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color:#434455;
+}
+
+/* Footer */
+
+.page-footer{
+    color: #F4F4FD;
+    background-color: #2E2F42;
+    padding: 100px 0;
+}
+.page-footer .container p{
+    max-width: 264px;
+}
+.page-footer .logo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #4d5ae5;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+.page-footer .logo .logo-studio {
+    color:#f4f4fd
+}
+.page-footer .footer-paragraph {
+    letter-spacing: 0.02em;
+}
