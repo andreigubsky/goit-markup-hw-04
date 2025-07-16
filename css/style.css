@@ -429,25 +429,29 @@ Section our-portfolio
 
 /*  */
 
-.footer-icon{
+.social-links{
     display: flex;
     width: 40px;
     height: 40px;
+    column-gap: 16px;
+}
+
+.social-links .link {
+    display: flex;
     border: 1px dashed red;
     border-radius: 2px;
-    background-color: #03a9f4;
-
+    /* background-color: #03a9f4; */
     justify-content: center;
     align-items: center;
 }
 
-.footer-icon-list .footer-icon:hover {
+.social-links .link:hover {
     background-color: #03a9f4;
 }
 
-.footer-icon-list .footer-icon{
+.social-links .footer-icon{
     fill: white;
 }
-.footer-icon-list .footer-icon:hover .{
+.social-links .footer-icon:hover .icon{
     fill: whitesmoke;
 }
