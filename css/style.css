@@ -291,7 +291,7 @@ Section our-team
     flex-basis: calc((100% - 72px) / 4);
 }
 .team-member .thumb{
-    padding: 32px 0;
+    padding: 32px 16px;
 }
 .team-header{
     font-size: 20px;
@@ -311,19 +311,27 @@ Section our-team
     margin-bottom: 8px;
 }
 /*  */
-.icon-social {
-    display: inline-flex;
-    border: 1px dashed red;
+.social-links{
+    display: flex;
+    gap: 24px;
+}
+.social-links .icon-social {
+    display: flex;
+    /* border: 1px dashed red; */
     border-radius: 2px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 16px;
+    width: 40px;
+    height: 40px;
+    /* fill:var(--color2, #4d5ae5); */
+    fill:var(--color2, #03a9f4);
 }
 .icon-social:hover {
     /* fill: #4D5AE5; */
     fill:#03a9f4;
 }
-/* .icon-item{
-    display: block;
-    gap: 24px;
-} */
+
 /*
 Main ->
 Section our-portfolio
@@ -433,7 +441,7 @@ Section our-portfolio
     display: flex;
     width: 40px;
     height: 40px;
-    column-gap: 16px;
+    column-gap: 24px;
 }
 
 .social-links .link {
