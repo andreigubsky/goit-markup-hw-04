@@ -321,7 +321,7 @@ Section our-team
     border-radius: 2px;
     justify-content: center;
     align-items: center;
-    column-gap: 16px;
+    column-gap: 24px;
     width: 40px;
     height: 40px;
     /* fill:var(--color2, #4d5ae5); */
@@ -413,6 +413,7 @@ Section our-portfolio
     color: #F4F4FD;
     background-color: #2E2F42;
     padding: 100px 0;
+    
 }
 .page-footer .container p{
     max-width: 264px;
@@ -436,30 +437,33 @@ Section our-portfolio
 }
 
 /*  */
-
-.social-links{
-    display: flex;
-    width: 40px;
-    height: 40px;
-    column-gap: 24px;
+.message-footer{
+    
 }
 
-.social-links .link {
+.footer-icon-list{
+    display: flex;
+    gap: 24px;
+}
+
+.footer-icon-list .link {
     display: flex;
     border: 1px dashed red;
     border-radius: 2px;
-    /* background-color: #03a9f4; */
     justify-content: center;
     align-items: center;
+    column-gap: 24px;
+    width: 40px;
+    height: 40px;
 }
 
-.social-links .link:hover {
+.footer-icon-list .link:hover {
     background-color: #03a9f4;
 }
 
-.social-links .footer-icon{
+.footer-icon-list .footer-icon{
     fill: white;
 }
-.social-links .footer-icon:hover .icon{
+.footer-icon-list .footer-icon:hover .icon{
     fill: whitesmoke;
 }
