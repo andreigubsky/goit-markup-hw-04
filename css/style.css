@@ -330,7 +330,7 @@ Main -> Section our-team
 }
 .icon-social:hover,
 .icon-social:focus {
-    fill: #31D0AA;
+    background-color: #31D0AA;
     cursor: pointer;
 }
 
@@ -485,8 +485,7 @@ Main -> Section our-portfolio
 }
 
 .footer-icon-list .link:hover {
-    /* background-color: #03a9f4; */
-    fill: #31D0AA;
+    background-color: #31D0AA;
     cursor: pointer;
 }
 
