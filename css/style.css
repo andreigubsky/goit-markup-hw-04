@@ -29,6 +29,7 @@ CSS-правила для скидання дефолтного підкресл
     --color-white: #FFFFFF;
     --color-grey: #434455;
     --color-svg: #f4f4fd;
+    --color-blue-a: #4d5ae5;
 }
 /*global*/
 body {
@@ -341,7 +342,7 @@ Main -> Section our-team - 3
     gap: 24px;
     justify-content: center
 }
-.first-icon{
+.icon-item{
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-list .link {
@@ -462,6 +463,9 @@ Main -> Section our-portfolio - 4
     color:#434455;
 }
 
+
+
+
 /* Footer */
 
 .page-footer{
@@ -478,6 +482,9 @@ Main -> Section our-portfolio - 4
     display: flex;
     gap:120px;
     align-items: baseline;
+}
+.message-footer{
+    margin-right: 120px;
 }
 .page-footer .logo {
     font-family: 'Raleway', sans-serif;
@@ -516,18 +523,34 @@ Main -> Section our-portfolio - 4
     
 }
 .footer-icon-list .icon-item {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     column-gap: 16px;
     width: 40px;
     height: 40px;
-    background-color: #4D5AE5;
-    border-radius: 50%;
+    /* background-color: #4D5AE5; */
+    
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-icon-list .icon-item:hover,.footer-icon-list .icon-item:focus {
     background-color: #31D0AA;
     cursor: pointer;
+}
+.icon{
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-blue-a);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-icon-list .icon:hover,.footer-icon-list .icon:focus {
+    background-color: #31D0AA;
+    cursor: pointer;
+}
+.footer-icom{
+    fill: var(--color-svg);
 }
