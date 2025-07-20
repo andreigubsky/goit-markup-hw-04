@@ -20,11 +20,20 @@ CSS-правила для скидання дефолтного підкресл
 Наприклад у шапці, навігації, списках в секціях тощо, тобто там, 
 де розташувати елементи горизонтально по-іншому неможливо.
 */
+:root{
+    /*fonts*/
+    --main-font: "Roboto", sans-serif;
 
+    /*colors*/
+    --color-black: #111111;
+    --color-white: #FFFFFF;
+    --color-grey: #434455;
+}
+/*global*/
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--main-font);
     line-height: 1.5;
-    color: #434455;
+    color: var(--color-grey);
     background-color: #fff;
 
 }
@@ -40,18 +49,15 @@ ul {
   margin: 0;
   padding-left: 0;
 }
-
 a {
     text-decoration: none;
     color: currentColor;
 }
-/**/
 img {
     display: block;
     max-width: 100%;
     height: auto;
 }
-/**/
 
 .container { 
     max-width: 1158px;
@@ -60,6 +66,9 @@ img {
     margin-left: auto;
     margin-right: auto;
     }
+
+
+
 
 /* Header */
 /* У хедера є нижня рамка, необхідно сильно наблизити макет, щоб побачити її. */
@@ -148,25 +157,25 @@ address .menu-contacts {
 All sections
 */
 .section {
-
-
     padding-top: 120px;
     padding-bottom: 120px;
-    
-    /*border: 1px solid brown;*/
 }
+
+
+
 /* 
-Main ->
-Section main-page 
+Main -> Section main-page 
 */
 
 .section.main-page {
+    
      background-color: #2E2F42;
      padding: 188px 0;
      text-align: center;
+
      background-repeat: no-repeat;
      background-position: center center;
-     background-size: cover;
+     background-size: 1440px;
      background-image: linear-gradient(
 	to bottom, 
 	rgba(46, 47, 66, 0.7)
@@ -207,8 +216,7 @@ Section main-page
 }
 
 /* 
-Main ->
-Section our-benefits
+Main -> Section our-benefits
 */
 .section.benefits{
     padding: 120px 0 120px 0;
@@ -244,10 +252,15 @@ Section our-benefits
 .benefits-list .benefit-item {
     flex-basis: calc((100% - 24px) / 4);
 }
-.benefit-item .icon{
+.icon-thumb{
+    padding: 24px 100px;
     border: 1px solid #8E8F99;
+    background-color:#F4F4FD;
     border-radius: 4px;
+    margin-bottom: 8px;
+    height: 112px;
 }
+
 .benefits-list .benefits-header {
     font-size: 20px;
     font-weight: 500;
@@ -291,7 +304,10 @@ Main -> Section our-team
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     flex-basis: calc((100% - 72px) / 4);
-    box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 
+    0px 3px 3px -2px rgba(0, 0, 0, 0.2), 
+    0px 3px 4px 0px rgba(0, 0, 0, 0.14), 
+    0px 1px 8px 0px rgba(0, 0, 0, 0.12);
     
 }
 .team-member .thumb{
@@ -315,24 +331,28 @@ Main -> Section our-team
     text-align: center;
     margin-bottom: 8px;
 }
-.social-links{
+
+.icon-list{
     display: flex;
     gap: 24px;
 }
-.social-links .icon-social {
+.icon-list .link {
     display: flex;
-    border-radius: 2px;
     justify-content: center;
     align-items: center;
-    column-gap: 24px;
+    column-gap: 16px;
     width: 40px;
     height: 40px;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    
 }
-.icon-social:hover,
-.icon-social:focus {
+.icon-list .link:hover {
     background-color: #31D0AA;
     cursor: pointer;
 }
+
+
 
 /*
 Main -> Section our-portfolio
@@ -366,45 +386,51 @@ Main -> Section our-portfolio
     width: calc((100% - 48px)/3);
     position: relative;
     overflow: hidden;
-    
+    transform: box-shadow;
+    transition: transform 250ms ease-in-out;
 }
+.porfolio-item:hover{
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+/* Image */
+.porfolio-item .portfolio-image{
+    position: relative;
+    overflow: hidden;
+}
+/* Overlay text over portfolio item */
+.overlay{
+    font-size: 16px;
+    padding: 40px 32px;
+    background-color: #4D5AE5;
+    color: #F4F4FD;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms ease-in-out;
+    cursor: pointer;
+  }
+  .porfolio-item:hover .overlay {
+       transform: translateY(0%); 
+       height: 75%;
+  }
+  
+
+/* Thumb */
 .porfolio-item .thumb{
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
     border-top: none;
-    transform: box-shadow;
+    transform: cursor;
     transition: transform 250ms ease-in-out;
-}
-.porfolio-item .portfolio-image{
-    border: 3px dashed green;
-    position: relative;
-    overflow: hidden;
-    
 }
 .porfolio-item .thumb:hover,
 .porfolio-item .thumb:focus{
-    cursor: pointer;
-    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-    border: 1px dashed red;
-    
+    cursor: pointer;    
 }
-/* Overlay text over portfolio item */
-.overlay{
-  font-size: 16px;
-  padding: 40px 32px;
-  background-color: #4D5AE5;
-  color: #F4F4FD;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: translateY(100%);
-  transition: transform 250ms ease-in-out;
-}
-.porfolio-item:hover .overlay {
-    transform: translateY(0);
-}
+
 /*  */
 
 .portfolio-list .porfolio-item-header{
@@ -438,10 +464,6 @@ Main -> Section our-portfolio
     display: flex;
     gap:120px;
 }
-/* .message-footer{
-    margin-left:120px;
-} */
-
 .page-footer .logo {
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
@@ -460,6 +482,7 @@ Main -> Section our-portfolio
     letter-spacing: 0.02em;
 }
 
+/**/
 .social-footer-links p{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -471,27 +494,20 @@ Main -> Section our-portfolio
 }
 .footer-icon-list{
     display: flex;
-    gap: 24px;
+    gap: 16px;
 }
-
 .footer-icon-list .link {
     display: flex;
-    border-radius: 2px;
     justify-content: center;
     align-items: center;
-    column-gap: 24px;
+    column-gap: 16px;
     width: 40px;
     height: 40px;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    
 }
-
 .footer-icon-list .link:hover {
     background-color: #31D0AA;
     cursor: pointer;
 }
-
-.footer-icon-list .footer-icon{
-    
-}
-.footer-icon-list .footer-icon:hover .icon{
-    fill: whitesmoke;
-} 
