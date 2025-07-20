@@ -366,7 +366,7 @@ fill:var(--color-svg);
 }
 
 /*
-Main -> Section our-portfolio
+Main -> Section our-portfolio - 4
 */
 
 .section.portfolio{
@@ -469,6 +469,7 @@ Main -> Section our-portfolio
     background-color: #2E2F42;
     padding: 100px 0;
     
+    
 }
 .page-footer .container p{
     max-width: 264px;
@@ -476,6 +477,7 @@ Main -> Section our-portfolio
 .page-footer .container{
     display: flex;
     gap:120px;
+    align-items: baseline;
 }
 .page-footer .logo {
     font-family: 'Raleway', sans-serif;
@@ -511,9 +513,9 @@ Main -> Section our-portfolio
 .footer-icon-list{
     display: flex;
     gap: 16px;
-    align-items: baseline;
+    
 }
-.footer-icon-list .link {
+.footer-icon-list .icon-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -525,7 +527,7 @@ Main -> Section our-portfolio
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-icon-list .link:hover,.footer-icon-list .link:focus {
+.footer-icon-list .icon-item:hover,.footer-icon-list .icon-item:focus {
     background-color: #31D0AA;
     cursor: pointer;
 }
