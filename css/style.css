@@ -341,6 +341,9 @@ Main -> Section our-team - 3
     gap: 24px;
     justify-content: center
 }
+.first-icon{
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .icon-list .link {
     display: flex;
     justify-content: center;
@@ -355,7 +358,7 @@ Main -> Section our-team - 3
 }
 .icon-list .link:hover, 
 .icon-list .link:focus {
-    background-color: #31D0AA;
+    background-color: #404bbf;
     cursor: pointer;
 }
 .icon-social{
@@ -493,7 +496,10 @@ Main -> Section our-portfolio
 }
 
 /**/
-.social-footer-links p{
+.social-footer-links{
+    margin-top: 120px;
+}
+.social-description{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -505,6 +511,7 @@ Main -> Section our-portfolio
 .footer-icon-list{
     display: flex;
     gap: 16px;
+    align-items: baseline;
 }
 .footer-icon-list .link {
     display: flex;
