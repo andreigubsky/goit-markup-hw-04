@@ -390,15 +390,21 @@ Main -> Section our-portfolio - 4
     transform: box-shadow;
     transition: transform 250ms ease-in-out;
 }
+.porfolio-item:first-child{
+    
+    transition: transform 250ms ease-in-out;
+}
 .porfolio-item:hover, 
 .porfolio-item:focus{
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 /* Image */
-.porfolio-item .portfolio-image{
+
+.image-application{
     position: relative;
     overflow: hidden;
 }
+
 /* Overlay text over portfolio item */
 .overlay{
     font-size: 16px;
