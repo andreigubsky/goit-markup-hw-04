@@ -92,7 +92,7 @@ img {
     gap: 40px;
     
 }
-.top-menu:first-child .top-menu-item a{
+.top-menu .top-menu-item:first-child a{
     color: #404BBF;
     display: block;
     padding: 24px 0;
