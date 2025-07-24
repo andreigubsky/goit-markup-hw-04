@@ -394,7 +394,7 @@ Main -> Section our-portfolio - 4
     transition: transform 250ms ease-in-out;
 }
 .porfolio-item:first-child{
-    transition: transform 250ms ease-in-out;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .porfolio-item:hover, 
 .porfolio-item:focus{
