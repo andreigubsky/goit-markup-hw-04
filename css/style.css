@@ -90,10 +90,9 @@ img {
     letter-spacing: 0.02em;
     display: flex;
     gap: 40px;
-    
 }
 
-    .navigation .top-menu .top-menu-item{    
+.navigation .top-menu .top-menu-item{    
     color: #404BBF;
     display: block;
     padding: 24px 0;
@@ -101,12 +100,6 @@ img {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);    
 }
 
-
-
-/* .top-menu a:hover, 
-.top-menu a:focus {
-    color: #404BBF;
-}  */
 .top-menu-item::after{
     content: "";
     width: 100%;
@@ -120,16 +113,14 @@ img {
 .menu-item:first-child{
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.top-menu-item:hover::after, 
+/* .top-menu-item:hover::after, 
 .top-menu-item:focus::after, 
 .top-menu-item:active::after {
     background-color:  #404BBF;
-}
-
-/* .menu-item a.top-menu-item{
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } */
 
+
+/* Address */
 .address-list .menu-contacts {
     font-style: normal;
     display: flex;
@@ -144,7 +135,8 @@ img {
 .menu-contacts:last-child li{
     margin-right: 0;
 }
-.menu-contacts-item{
+/* + */
+.address-list .menu-contacts .menu-contacts-item{
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
     
