@@ -93,14 +93,18 @@ img {
 }
 
 .navigation .top-menu .top-menu-item{    
-    color: #404BBF;
+    color: #000000;
     display: block;
     padding: 24px 0;
     position: relative;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);    
 }
+.navigation .top-menu .top-menu-item:hover,
+.navigation .top-menu .top-menu-item:focus {
+    color: #404BBF;
+}
 
-.top-menu-item::after{
+.top-menu-item.current::after{
     content: "";
     width: 100%;
     height: 4px;
@@ -240,7 +244,6 @@ Main -> Section our-benefits - 2
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 24px 100px;
     border: 1px solid #8E8F99;
     background-color:#F4F4FD;
     border-radius: 4px;
@@ -274,7 +277,7 @@ Main -> Section our-team - 3
 }
 .section.team .section-header {
     font-size: 36px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-align: center;
@@ -305,7 +308,7 @@ Main -> Section our-team - 3
 }
 .team-header{
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1.2;
     text-align: center;
     text-transform: capitalize;
@@ -381,12 +384,10 @@ Main -> Section our-portfolio - 4
     width: calc((100% - 48px)/3);
     position: relative;
     overflow: hidden;
-    transform: box-shadow;
     transition: transform 250ms ease-in-out;
-}
-.porfolio-item:first-child{
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .porfolio-item:hover, 
 .porfolio-item:focus{
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -418,7 +419,7 @@ Main -> Section our-portfolio - 4
   .porfolio-item:hover .overlay,
   .porfolio-item:focus .overlay {
        transform: translateY(0%); 
-       height: 75%;
+       height: 100%;
   }
   
 
@@ -495,9 +496,7 @@ Main -> Section our-portfolio - 4
 }
 
 /**/
-.social-footer-links{
-    margin-top: 120px;
-}
+
 .social-description{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -513,16 +512,8 @@ Main -> Section our-portfolio - 4
     
 }
 .footer-icon-list .icon-item {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    column-gap: 16px;
     width: 40px;
     height: 40px;
-    /* background-color: #4D5AE5; */
-    
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-item a:hover,
 .icon-item a:focus {
