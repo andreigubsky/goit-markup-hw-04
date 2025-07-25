@@ -103,7 +103,9 @@ img {
 .navigation .top-menu .top-menu-item:focus {
     color: #404BBF;
 }
-
+.navigation .top-menu .top-menu-item.current{    
+    color: #404BBF;
+}
 .top-menu-item.current::after{
     content: "";
     width: 100%;
